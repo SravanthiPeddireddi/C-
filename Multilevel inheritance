@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+class base
+{
+public :
+int x,y;
+void getx()
+{
+    x=10;
+    cout<<x<<endl;
+
+}  
+};
+class derived1 : public base
+
+{
+   
+   public :void gety()
+   {
+      y=20;
+        cout<<y<<endl;
+   }
+};
+class derived2: public derived1
+{
+   public: int total;
+   void add()
+   {
+       total=x+y;
+       cout<<total<<endl;
+   }
+};
+
+int main()
+{
+    derived2 obj;
+    obj.getx();
+    obj.gety();
+     obj.add();
+}
