@@ -1,0 +1,58 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class name
+{
+    int x;
+    public : name (int n) //parameterized constructor
+    {
+        x=n;
+}
+name() //deafult construtcor
+{
+    int z;
+  cout<<"enter prime number" <<  endl;
+  cin>>z;
+  x=z;
+  }
+  void prime()
+  {
+      int count=0;
+  for(int i=1;i<=x;i++)
+  {
+      if(x%i==0)
+      count++;
+  }
+      if (count==2)
+  cout<<"prime number"<<endl;  
+  else
+  cout<<"not prime number"<<endl;  
+  }
+void palindrome()
+{
+   int n,reverse=0,rem;
+    n=x;
+    while(n!=0)
+{
+    rem=n%10;
+    reverse=reverse*10+rem;
+    n=n/10;
+}
+    if(x==reverse)
+    {
+        cout<<"palindrome"<<endl;  
+        }
+        else
+        {
+            cout<<"not palindrome"<<endl;
+        }
+}
+};
+int main()
+{
+    name obj;
+    name obj1(122);
+   obj.prime();
+   obj1.palindrome();
+}
+    
