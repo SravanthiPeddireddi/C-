@@ -1,0 +1,27 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class name
+{
+int x;
+public : name (int a)
+{
+    x=a;
+    cout<<x <<"parameterized constructor"<<endl;
+}
+name()
+{
+    x=100;
+    cout<<x<<"deafult instructor"<<endl;
+}
+~name()
+{
+    cout<<x<<"destructor "<<endl;
+}
+};
+int main()
+{
+    name obj;
+    name obj1(10);
+   
+}
