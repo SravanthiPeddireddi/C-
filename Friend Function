@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+class Account
+{
+private:
+    int balance;
+
+public:
+    Account(int b) {
+        balance = b;
+    }
+
+    // Friend function declaration
+    friend void showBalance(Account acc);
+};
+
+// Friend function definition
+void showBalance(Account acc) {
+    // Accessing private member
+    cout << "Your account balance is: ₹" << acc.balance << endl;
+}
+
+int main() {
+    Account obj(5000);
+    showBalance(obj);  // calling friend function
+    return 0;
+}
