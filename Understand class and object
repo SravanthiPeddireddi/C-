@@ -1,0 +1,24 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class airthematic
+{
+int x,y;
+public : void sum()
+{
+    x=10;
+    y=20;
+    cout<<x<<"+"<<y<<"="<<x+y<<endl;
+}
+void sub()
+{
+    cout<<x<<"-"<<y<<"="<<x-y<<endl;
+}
+};
+int main() 
+{
+    airthematic  obj;
+    obj.sum();
+    obj.sub();
+}
+   
