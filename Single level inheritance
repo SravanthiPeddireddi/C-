@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class base
+{
+public :
+int x,y;
+void getxy()
+{
+    x=10;
+    y=20;
+    cout<<x<<endl;
+    cout<<y<<endl;
+}  
+};
+class derived : public base
+
+{
+   public : int total;
+   void add()
+   {
+       total=x+y;
+       cout<<total<<endl;
+   }
+   
+
+};
+int main()
+{
+    derived obj;
+    obj.getxy();
+     obj.add();
+}
