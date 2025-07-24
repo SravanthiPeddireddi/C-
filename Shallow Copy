@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+class myclass
+{
+    public : int *x;
+myclass(int value)
+{
+    x=new int(value);
+}
+myclass(myclass &obj)
+{
+    x=obj.x;
+}
+};
+int main()
+{
+    myclass obj (10);
+    myclass obj1=obj;
+    *obj1.x=20;
+    cout<<*obj.x<<*obj1.x<<endl;
+}
