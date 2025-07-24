@@ -1,0 +1,23 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class name
+{
+    int x,y;
+    public : name (int a,int b)
+    {
+        x=a;
+        y=b;
+    }
+    void add()
+    {
+        cout<<x+y<<endl;
+        
+    }
+    };
+    int main()
+    {
+        name obj(10,20);
+        obj.add();
+    }
+
