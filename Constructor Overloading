@@ -1,0 +1,46 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class name
+{
+int x,y;
+float z;
+public : name (int a,int b)//parameterized constructor
+{
+    x=a;
+    y=b;
+}
+name(int a)
+{
+    x=a;
+}
+name (int a,float b )
+{
+    x=a;
+    z=b;
+}
+name(double a,int b)
+{
+    z=a;
+    y=b;
+}
+void sum1()
+{
+cout<<x+y<<endl;
+}  
+void sum2()
+{
+cout<<x+z<<endl ;
+}
+void sum3()
+{
+    cout<<z+y<<endl ; 
+}
+};
+int main()
+{
+name obj(10,20),obj1(20,float(10.5)),obj2(15.5,3);
+obj.sum1();
+obj1.sum2();
+obj2.sum3();
+}
