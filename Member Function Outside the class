@@ -1,0 +1,29 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class name
+{
+ int x;
+ public : 
+ void  fact(int n);
+};
+ void name :: fact( int n)
+     {
+         
+         x=n;
+         int i,f=1;
+         for(i=1;i<=x;i++)
+         f=f*i;
+         cout<<"factorial of a given number is"<<n<<"\n"<<f<<endl;
+     }
+     int main()
+     {
+         int  a;
+         name  obj1,obj2;
+         obj1.fact(5); 
+         cout<<"enter number"<<endl;
+         cin>>a;
+         obj2.fact(a);
+     }
+    
