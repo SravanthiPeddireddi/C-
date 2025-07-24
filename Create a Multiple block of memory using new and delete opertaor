@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int m;
+    int *ptr;
+
+    cout << "Enter size: ";
+    cin >> m;
+
+    ptr = new int[m];  // Allocates memory for 'm' integers
+
+    if (ptr == NULL) {
+        cout << "Memory is not allocated" << endl;
+    } else {
+        cout << "Memory Allocated" << endl;
+
+        for (int i = 0; i < m; i++) {
+            cout << "Enter integer " << ": ";
+            cin >> *(ptr + i);  // Store each element
+        }
+
+        cout << "\nEntered integers are:\n";
+        for (int i = 0; i < m; i++) {
+            cout << *(ptr + i) << endl;  // Display each element
+        }
+
+        delete[] ptr;  // Free the memory
+    }
+
+    return 0;
+}
