@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class ATM {
+    int balance;
+
+public:
+    // ✅ Constructor to initialize balance
+    ATM(int b) {
+        balance = b;
+        cout << "ATM account created with balance: ₹" << balance << endl;
+    }
+
+    void checkBalance() {
+        cout << "Your current balance is: ₹" << balance << endl;
+    }
+
+    void deposit(int amount) {
+        balance += amount;
+        cout << "Deposited: ₹" << amount << ". New balance: ₹" << balance << endl;
+    }
+
+    void withdraw(int amount) {
+        if (amount > balance)
+            cout << "Insufficient balance!" << endl;
+        else {
+            balance -= amount;
+            cout << "Withdrawn: ₹" << amount << ". Remaining balance: ₹" << balance << endl;
+        }
+    }
+};
+int main()
+{
+ATM obj(1000);
+obj.checkBalance();
+obj.withdraw(500);
+ obj.deposit(3000);
+}
