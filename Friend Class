@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+// Forward declaration of class B
+class B;
+
+class A {
+private:
+    int value;
+
+public:
+    A() {
+        value = 50;
+    }
+
+    // Declare class B as a friend of A
+    friend class B;
+};
+
+class B {
+public:
+    void display(A obj1) {
+        // Accessing private data of class A
+        cout << "Accessing A's private data from B: " << obj1.value << endl;
+    }
+};
+
+int main() {
+    A objA;
+    B objB;
+    objB.display(objA);
+    return 0;
+}
